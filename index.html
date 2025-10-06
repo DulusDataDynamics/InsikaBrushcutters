@@ -3,444 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insika Brushcutters - Sales, Spares & Repairs</title>
+    <title>Insika Brushcutters - Garden Machinery Specialists</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2d5016',
-                        secondary: '#4a7c2a',
-                        accent: '#f59e0b',
-                        light: '#f0fdf4',
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
         }
-        .hero-pattern {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%232d5016" width="100" height="100"/><path fill="%234a7c2a" d="M0 0L100 100" stroke-width="0"/></svg>');
-            background-size: cover;
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+        }
+        .branch-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .branch-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
         }
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen flex flex-col">
-    <!-- Header/Navigation -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center">
-                <h1 class="text-2xl font-bold text-primary">
-                    <i class="fas fa-leaf mr-2"></i>Insika Brushcutters
-                </h1>
+                <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                    IB
+                </div>
+                <h1 class="text-xl font-bold text-gray-800">Insika Brushcutters</h1>
             </div>
-            
             <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-700 hover:text-primary font-medium">Home</a>
-                <a href="#services" class="text-gray-700 hover:text-primary font-medium">Services</a>
-                <a href="#products" class="text-gray-700 hover:text-primary font-medium">Products</a>
-                <a href="#about" class="text-gray-700 hover:text-primary font-medium">About</a>
-                <a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+                <a href="#home" class="text-gray-600 hover:text-blue-600 font-medium">Home</a>
+                <a href="#branches" class="text-gray-600 hover:text-blue-600 font-medium">Branches</a>
+                <a href="#services" class="text-gray-600 hover:text-blue-600 font-medium">Services</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium">Contact</a>
             </nav>
-            
-            <div class="flex items-center space-x-4">
-                <a href="https://www.facebook.com/groups/1321092482837959/" target="_blank" class="text-blue-600 hover:text-blue-800">
-                    <i class="fab fa-facebook text-xl"></i>
-                </a>
-                <a href="#" class="text-pink-600 hover:text-pink-800">
-                    <i class="fab fa-instagram text-xl"></i>
-                </a>
-                <a href="https://wa.me/27784841997" class="text-green-500 hover:text-green-700">
-                    <i class="fab fa-whatsapp text-xl"></i>
-                </a>
-            </div>
-            
-            <button class="md:hidden text-gray-700">
+            <button class="md:hidden text-gray-600">
                 <i class="fas fa-bars text-xl"></i>
             </button>
         </div>
     </header>
 
-    <main class="flex-1">
-
     <!-- Hero Section -->
-    <section id="home" class="hero-pattern text-white py-20">
+    <section id="home" class="hero-gradient text-white py-16 md:py-24">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">Professional Garden Equipment</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Sales, Spares & Repairs for Chainsaws, Brushcutters, and Blowers</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Garden Machinery Specialists</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Professional sales, spares, and repairs for brushcutters, chainsaws, and blowers in Pinetown and Hillcrest.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://wa.me/27784841997" class="bg-accent hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center">
-                    <i class="fab fa-whatsapp mr-2 text-xl"></i> Contact on WhatsApp
+                <a href="#branches" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition duration-300">
+                    Find Our Branches
                 </a>
-                <a href="#contact" class="bg-transparent hover:bg-primary border-2 border-white text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-                    <i class="fas fa-phone-alt mr-2"></i> Call Now
+                <a href="tel:+27784841997" class="bg-white text-blue-700 hover:bg-gray-100 font-medium py-3 px-6 rounded-lg transition duration-300">
+                    <i class="fas fa-phone mr-2"></i>Call Now
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches Section -->
+    <section id="branches" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Branches</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Pinetown Branch -->
+                <div class="branch-card bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-gray-800">Pinetown Branch</h3>
+                        <div class="flex items-center bg-green-50 text-green-700 px-2 py-1 rounded-full">
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <span class="font-medium">5.0 ★ (2)</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-600 mb-2">
+                            <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>
+                            94 Mariannhill Rd, Ashley, Pinetown, 3640
+                        </p>
+                        <p class="text-gray-600 mb-2">
+                            <i class="fas fa-clock text-blue-500 mr-2"></i>
+                            Open: 7:00 AM - 5:00 PM (Mon-Fri)
+                        </p>
+                        <p class="text-gray-600">
+                            <i class="fas fa-phone text-blue-500 mr-2"></i>
+                            078 484 1997
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <a href="https://maps.google.com/?q=94 Mariannhill Rd, Ashley, Pinetown, 3640" target="_blank" class="bg-blue-100 text-blue-700 hover:bg-blue-200 px-3 py-1 rounded-full text-sm font-medium transition duration-300">
+                            <i class="fas fa-map-marker-alt mr-1"></i> View on Map
+                        </a>
+                        <a href="https://www.facebook.com/share/19okC3gpS7/" target="_blank" class="bg-blue-600 text-white hover:bg-blue-700 px-3 py-1 rounded-full text-sm font-medium transition duration-300">
+                            <i class="fab fa-facebook-f mr-1"></i> Facebook
+                        </a>
+                    </div>
+                    <div class="map-container h-48 bg-gray-200 rounded-lg overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.456789012345!2d30.854567!3d-29.858912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7a9d8c5d5d5d5%3A0x5d5d5d5d5d5d5d5d!2s94%20Mariannhill%20Rd%2C%20Ashley%2C%20Pinetown%2C%203640!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Hillcrest Branch -->
+                <div class="branch-card bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-gray-800">Hillcrest Branch</h3>
+                        <div class="flex items-center bg-green-50 text-green-700 px-2 py-1 rounded-full">
+                            <i class="fas fa-star text-yellow-500 mr-1"></i>
+                            <span class="font-medium">4.9 ★ (14)</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-600 mb-2">
+                            <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>
+                            14 Old Main Road, Everton Gillitts, Durban, 3610
+                        </p>
+                        <p class="text-gray-600 mb-2">
+                            <i class="fas fa-clock text-blue-500 mr-2"></i>
+                            Open: 7:30 AM - 5:00 PM (Mon-Fri)
+                        </p>
+                        <p class="text-gray-600">
+                            <i class="fas fa-phone text-blue-500 mr-2"></i>
+                            063 356 3552
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <a href="https://maps.google.com/?q=14 old main road everton gillitts everton gillitts, Durban, 3610" target="_blank" class="bg-blue-100 text-blue-700 hover:bg-blue-200 px-3 py-1 rounded-full text-sm font-medium transition duration-300">
+                            <i class="fas fa-map-marker-alt mr-1"></i> View on Map
+                        </a>
+                        <a href="https://www.facebook.com/share/16GhinuteA/" target="_blank" class="bg-blue-600 text-white hover:bg-blue-700 px-3 py-1 rounded-full text-sm font-medium transition duration-300">
+                            <i class="fab fa-facebook-f mr-1"></i> Facebook
+                        </a>
+                    </div>
+                    <div class="map-container h-48 bg-gray-200 rounded-lg overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.456789012345!2d30.854567!3d-29.858912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7a9d8c5d5d5d5%3A0x5d5d5d5d5d5d5d5d!2s14%20Old%20Main%20Road%2C%20Everton%20Gillitts%2C%20Durban%2C%203610!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-16 bg-light">
+    <section id="services" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-primary mb-12">Our Services</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-shopping-cart text-white text-2xl"></i>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shopping-cart text-blue-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Equipment Sales</h3>
-                    <p class="text-gray-600">We offer high-quality brushcutters, chainsaws, and blowers for all your gardening needs.</p>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Sales</h3>
+                    <p class="text-gray-600">Quality garden machinery including brushcutters, chainsaws, and blowers.</p>
                 </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-tools text-white text-2xl"></i>
+                <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-green-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Repair Services</h3>
-                    <p class="text-gray-600">Expert repair services for all types of garden equipment with warranty on workmanship.</p>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Spares & Repairs</h3>
+                    <p class="text-gray-600">Professional repair services and genuine spare parts for all your equipment.</p>
                 </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-cogs text-white text-2xl"></i>
+                <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tree text-yellow-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Spare Parts</h3>
-                    <p class="text-gray-600">Genuine spare parts available for all major brands of garden equipment.</p>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Chainsaws</h3>
+                    <p class="text-gray-600">Powerful and reliable chainsaws for all your cutting needs.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-primary mb-12">Our Products</h2>
-
-            <div class="relative">
-                <button id="products-prev" aria-label="Previous" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-primary shadow rounded-full w-10 h-10 flex items-center justify-center backdrop-blur border border-gray-200">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button id="products-next" aria-label="Next" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-primary shadow rounded-full w-10 h-10 flex items-center justify-center backdrop-blur border border-gray-200">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-
-                <div id="products-carousel" class="overflow-hidden rounded-lg">
-                    <div class="flex transition-transform duration-500 ease-out will-change-transform">
-                        <div class="w-full flex-shrink-0 px-2">
-                            <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md group">
-                                <div class="h-56 bg-gray-200 flex items-center justify-center relative">
-                                    <i class="fas fa-tree text-6xl text-primary transition-transform duration-500 group-hover:scale-110"></i>
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                </div>
-                                <div class="p-5">
-                                    <h3 class="text-xl font-semibold mb-1">Chainsaws</h3>
-                                    <p class="text-gray-600">Professional and domestic chainsaws for all cutting needs.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="w-full flex-shrink-0 px-2">
-                            <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md group">
-                                <div class="h-56 bg-gray-200 flex items-center justify-center relative">
-                                    <i class="fas fa-cut text-6xl text-primary transition-transform duration-500 group-hover:scale-110"></i>
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                </div>
-                                <div class="p-5">
-                                    <h3 class="text-xl font-semibold mb-1">Brushcutters</h3>
-                                    <p class="text-gray-600">High-performance brushcutters for lawn and garden.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="w-full flex-shrink-0 px-2">
-                            <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md group">
-                                <div class="h-56 bg-gray-200 flex items-center justify-center relative">
-                                    <i class="fas fa-wind text-6xl text-primary transition-transform duration-500 group-hover:scale-110"></i>
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                </div>
-                                <div class="p-5">
-                                    <h3 class="text-xl font-semibold mb-1">Blowers</h3>
-                                    <p class="text-gray-600">Powerful blowers to keep surroundings clean and tidy.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="w-full flex-shrink-0 px-2">
-                            <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md group">
-                                <div class="h-56 bg-gray-200 flex items-center justify-center relative">
-                                    <i class="fas fa-cog text-6xl text-primary transition-transform duration-500 group-hover:scale-110"></i>
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                </div>
-                                <div class="p-5">
-                                    <h3 class="text-xl font-semibold mb-1">Spare Parts</h3>
-                                    <p class="text-gray-600">Genuine parts for maintenance and repairs.</p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wind text-red-600 text-2xl"></i>
                     </div>
-                </div>
-
-                <div class="mt-6 flex justify-center gap-2" id="products-dots"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-primary text-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-8">About Insika Brushcutters</h2>
-                <p class="text-lg mb-6 text-center">We are a dedicated garden equipment shop located in Pinetown, specializing in sales, spares, and repairs for chainsaws, brushcutters, and blowers.</p>
-                
-                <div class="bg-secondary p-6 rounded-lg mt-8">
-                    <h3 class="text-xl font-semibold mb-4">Our Location</h3>
-                    <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Shop 5, Ashley Corner</p>
-                    <p class="mb-2">94 Marianhill Road</p>
-                    <p>Pinetown</p>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Blowers</h3>
+                    <p class="text-gray-600">Efficient blowers to keep your garden clean and tidy.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-light">
+    <section id="contact" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-primary mb-12">Contact Us</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
-                    <p class="mb-6">We're here to answer any questions you may have about our products and services.</p>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Get In Touch</h3>
+                    <p class="text-gray-600 mb-6">Have questions about our products or services? Reach out to us through any of the channels below.</p>
                     
                     <div class="space-y-4">
                         <div class="flex items-start">
-                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-phone-alt text-white"></i>
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-phone text-blue-600"></i>
                             </div>
-                            <div class="ml-4">
-                                <h4 class="font-semibold">Phone</h4>
-                                <a href="tel:0784841997" class="text-gray-600 hover:text-primary">078 484 1997</a>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fab fa-whatsapp text-white"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-semibold">WhatsApp</h4>
-                                <a href="https://wa.me/27784841997" class="text-gray-600 hover:text-primary">078 484 1997</a>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Phone</h4>
+                                <a href="tel:+27784841997" class="text-blue-600 hover:text-blue-800">078 484 1997</a>
                             </div>
                         </div>
                         
                         <div class="flex items-start">
-                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-map-marker-alt text-white"></i>
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fab fa-whatsapp text-green-600"></i>
                             </div>
-                            <div class="ml-4">
-                                <h4 class="font-semibold">Address</h4>
-                                <p class="text-gray-600">Shop 5, Ashley Corner<br>94 Marianhill Rd, Pinetown</p>
+                            <div>
+                                <h4 class="font-bold text-gray-800">WhatsApp</h4>
+                                <a href="https://wa.me/27784841997" target="_blank" class="text-green-600 hover:text-green-800">+27 78 484 1997</a>
                             </div>
                         </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fab fa-facebook-f text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Facebook</h4>
+                                <div class="flex space-x-2">
+                                    <a href="https://www.facebook.com/share/16GhinuteA/" target="_blank" class="text-blue-600 hover:text-blue-800">Hillcrest</a>
+                                    <span class="text-gray-400">|</span>
+                                    <a href="https://www.facebook.com/share/19okC3gpS7/" target="_blank" class="text-blue-600 hover:text-blue-800">Pinetown</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Business Hours</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Monday - Friday</span>
+                            <span class="font-medium">7:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Saturday</span>
+                            <span class="font-medium">8:00 AM - 1:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Sunday</span>
+                            <span class="font-medium">Closed</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Hillcrest Hours</h4>
+                        <p class="text-gray-600">Opens at 7:30 AM on weekdays</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    </main>
-
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Insika Brushcutters</h3>
-                    <p class="mb-4">Your trusted partner for all garden equipment needs.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/groups/1321092482837959/" target="_blank" class="text-gray-300 hover:text-white">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-white">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                        <a href="https://wa.me/27784841997" class="text-gray-300 hover:text-white">
-                            <i class="fab fa-whatsapp text-xl"></i>
-                        </a>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-2">
+                            IB
+                        </div>
+                        <h2 class="text-xl font-bold">Insika Brushcutters</h2>
                     </div>
+                    <p class="text-gray-400 mt-2">Garden Machinery Specialists</p>
                 </div>
                 
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-300 hover:text-white">Home</a></li>
-                        <li><a href="#services" class="text-gray-300 hover:text-white">Services</a></li>
-                        <li><a href="#products" class="text-gray-300 hover:text-white">Products</a></li>
-                        <li><a href="#about" class="text-gray-300 hover:text-white">About</a></li>
-                        <li><a href="#contact" class="text-gray-300 hover:text-white">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Contact Info</h3>
-                    <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Shop 5, Ashley Corner</p>
-                    <p class="mb-2">94 Marianhill Rd, Pinetown</p>
-                    <p class="mb-2"><i class="fas fa-phone-alt mr-2"></i> 078 484 1997</p>
-                    <p><i class="fab fa-whatsapp mr-2"></i> 078 484 1997</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/share/16GhinuteA/" target="_blank" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/27784841997" target="_blank" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-green-500 transition duration-300">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
             
-            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
-                <p>&copy; 2024 Insika Brushcutters. All rights reserved.</p>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Insika Brushcutters. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/27784841997" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg transition duration-300 z-40">
-        <i class="fab fa-whatsapp text-2xl"></i>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/27784841997" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition duration-300 z-20">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
     </a>
 
     <script>
-        // Simple JavaScript for smooth scrolling
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-        
-        // Form submission handling
-        const contactForm = document.querySelector('form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Thank you for your message. We will contact you shortly!');
-                this.reset();
-            });
-        }
 
-        // Products carousel (buttons, dots, swipe)
-        (function initProductsCarousel() {
-            const carousel = document.getElementById('products-carousel');
-            if (!carousel) return;
-            const track = carousel.querySelector('.flex');
-            const slides = Array.from(track.children);
-            const prevBtn = document.getElementById('products-prev');
-            const nextBtn = document.getElementById('products-next');
-            const dotsContainer = document.getElementById('products-dots');
-
-            let currentIndex = 0;
-            let slideWidth = carousel.clientWidth;
-
-            // Build dots
-            slides.forEach((_, i) => {
-                const dot = document.createElement('button');
-                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-                dot.className = 'w-2.5 h-2.5 rounded-full bg-gray-300 hover:bg-primary/80 transition-colors';
-                dot.addEventListener('click', () => goToSlide(i));
-                dotsContainer.appendChild(dot);
-            });
-
-            function updateDots() {
-                const dots = Array.from(dotsContainer.children);
-                dots.forEach((d, i) => {
-                    d.className = 'w-2.5 h-2.5 rounded-full transition-colors ' + (i === currentIndex ? 'bg-primary' : 'bg-gray-300 hover:bg-primary/80');
-                });
-            }
-
-            function setSlideWidth() {
-                slideWidth = carousel.clientWidth;
-                // Ensure each slide matches viewport width
-                slides.forEach(slide => {
-                    slide.style.width = slideWidth + 'px';
-                });
-                // Reposition to current slide after resize
-                track.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-            }
-
-            function goToSlide(index) {
-                currentIndex = (index + slides.length) % slides.length;
-                track.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-                updateDots();
-            }
-
-            function next() { goToSlide(currentIndex + 1); }
-            function prev() { goToSlide(currentIndex - 1); }
-
-            // Buttons
-            if (prevBtn) prevBtn.addEventListener('click', prev);
-            if (nextBtn) nextBtn.addEventListener('click', next);
-
-            // Touch swipe
-            let startX = 0;
-            let isDragging = false;
-            let currentTranslate = 0;
-            let animationId;
-
-            function touchStart(e) {
-                isDragging = true;
-                startX = (e.touches ? e.touches[0].clientX : e.clientX);
-                currentTranslate = -currentIndex * slideWidth;
-                track.style.transition = 'none';
-            }
-
-            function touchMove(e) {
-                if (!isDragging) return;
-                const x = (e.touches ? e.touches[0].clientX : e.clientX);
-                const delta = x - startX;
-                track.style.transform = `translateX(${currentTranslate + delta}px)`;
-            }
-
-            function touchEnd(e) {
-                if (!isDragging) return;
-                isDragging = false;
-                track.style.transition = '';
-                const x = (e.changedTouches ? e.changedTouches[0].clientX : e.clientX);
-                const delta = x - startX;
-                const threshold = Math.min(120, slideWidth * 0.2);
-                if (delta > threshold) {
-                    prev();
-                } else if (delta < -threshold) {
-                    next();
-                } else {
-                    goToSlide(currentIndex);
-                }
-            }
-
-            carousel.addEventListener('mousedown', touchStart);
-            carousel.addEventListener('mousemove', touchMove);
-            window.addEventListener('mouseup', touchEnd);
-            carousel.addEventListener('touchstart', touchStart, { passive: true });
-            carousel.addEventListener('touchmove', touchMove, { passive: true });
-            carousel.addEventListener('touchend', touchEnd);
-
-            // Init
-            setSlideWidth();
-            updateDots();
-            goToSlide(0);
-            window.addEventListener('resize', setSlideWidth);
-        })();
+        // Mobile menu toggle (placeholder functionality)
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            alert('Mobile menu would open here in a full implementation');
+        });
     </script>
 </body>
 </html>
